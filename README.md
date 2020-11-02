@@ -3,6 +3,6 @@ This repository contains the prototype of the web application for the final grou
 
 ## Group 1
 ### Amoli, Nishant (B00835717)
-### Doguparthi, Sneha Jayavardhini B00846995
-### Jiang, Xingyu B00713234 
-### Patel, Tejas B0084629
+### Doguparthi, Sneha Jayavardhini (B00846995)
+### Jiang, Xingyu (B00713234) 
+### Patel, Tejas (B0084629)
