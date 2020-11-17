@@ -97,6 +97,11 @@
       margin-left: 72px;
     }    
   }
+  .responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
 </style>
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -110,7 +115,7 @@
 <header class="mb-5">
   <nav class="navbar-dark navbar-expand-lg navbar bg-dark">
       <div class="navbar-brand">
-          <h1 class="display-5 text-white"><a class="text-white" href="/">ExerciseRecommenderApp</a></h1>
+          <h1 class="display-5 text-white"><a class="text-white" href="/">Welcome</a></h1>
       </div>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -128,8 +133,7 @@
                   <a class="nav-link" href="https://www.google.com">SignUp</a>
               </li>
           </ul>
-          <span style="color:white;"> Made with&nbsp;<i style="color:red; font-size:20px" class="fa">&#xf004;</i>&nbsp;at DAL, 2020 &#169;.</span>
-      </div>
+        </div>
   </nav>
 </header> 
 
@@ -141,10 +145,10 @@
     <h2 class="text-center mb-5">Welcome to {{ title }}!</h2>
 
     <div class="row">
-      <div class="col">
-        <img src="assets/images/exer.jpg" width="400" fluid>
+      <div class="col-md-6">
+        <img class = "responsive" src="assets/images/exer.jpg" fluid>
       </div>
-      <div class="col" >
+      <div class="col-md-6" >
         <h4>Success starts with a good health. Have a health goal?</h4>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -182,7 +186,7 @@
     </a>
   </div>
   <footer>
-    Made with&nbsp;<i style="color:red; font-size:20px" class="fa">&#xf004;</i>&nbsp;at DAL.     
+    Made with&nbsp;<i style="color:red; font-size:20px" class="fa">&#xf004;</i>&nbsp;at DAL, 2020 &#169;.     
   </footer>
 </div>
 <router-outlet></router-outlet>
