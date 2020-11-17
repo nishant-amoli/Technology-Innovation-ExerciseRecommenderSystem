@@ -19,11 +19,17 @@
     "@angular/compiler-cli": "~10.2.0",
     "@angular/core": "~10.2.0",
     "@angular/forms": "~10.2.0",
+    "@angular/localize": "~10.2.0",
     "@angular/platform-browser": "~10.2.0",
     "@angular/platform-browser-dynamic": "~10.2.0",
     "@angular/router": "~10.2.0",
+<<<<<<< Updated upstream
     "express": "^4.17.1",
     "path": "^0.12.7",
+=======
+    "@ng-bootstrap/ng-bootstrap": "^8.0.0",
+    "bootstrap": "^4.5.0",
+>>>>>>> Stashed changes
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "typescript": "~4.0.2",
