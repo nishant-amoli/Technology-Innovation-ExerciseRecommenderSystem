@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ExerciseRecommenderApp"
+    }
+  },
+  "defaultProject": "ExerciseRecommenderApp",
+  "cli": {
+    "analytics": false
+  }
 }

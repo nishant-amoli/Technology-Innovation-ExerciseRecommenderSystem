@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserDashboardComponent
+    UserDashboardComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
