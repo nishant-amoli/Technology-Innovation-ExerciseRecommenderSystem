@@ -14,7 +14,7 @@ This repository contains the prototype of the web application for the final grou
 
 ## Technology Stack
 
-Angular, Bootstrap, MySQL, CI/CD
+Angular, Bootstrap, Visual Studio Code, MySQL, CI/CD
 
 ## Web Application URLs
 
@@ -42,7 +42,7 @@ Step 3) Run the installer.
 
 ### Express
 
-Step 1) In order to download and install Express, open the terminal or the poweshell (for VS code), and change the directory such that the present present working directory is the application's directory. For example, cd D:/Tutorial3/ReactApp .
+Step 1) In order to download and install Express, open the terminal or the poweshell (for VS code), and change the directory such that the present present working directory is the application's directory.
 
 Step 2) Now express module can be installed under the npm-module directory using the following command:
 npm install --save express
@@ -68,4 +68,4 @@ Step 1) Open the web browser from desktop or mobile.
 
 Step 2) Open the link of the deployed application provided under the deployment section in this document. Alternativly, you can run the application locally as described in the previous section.
 
-### Test Cases Create Event
+### Test Cases

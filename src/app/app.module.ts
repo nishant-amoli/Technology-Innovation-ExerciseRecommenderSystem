@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { AppHeaderComponent } from './app-header/app-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserDashboardComponent,
-    HomePageComponent
+    HomePageComponent,
+    AppHeaderComponent
   ],
   imports: [
     BrowserModule,

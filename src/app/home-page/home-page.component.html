@@ -1,197 +1,66 @@
-<style>
-    :host {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      font-size: 14px;
-      color: #333;
-      box-sizing: border-box;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-    
-    .content {
-      display: flex;
-      margin: 82px auto 32px;
-      padding: 0 16px;
-      max-width: 960px;
-      flex-direction: column;
-      align-items: center;
-    }
-   
-    .card svg.material-icons path {
-      fill: #888;
-    }
-  
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 16px;
-    }
-  
-    .card {
-      border-radius: 4px;
-      border: 1px solid #eee;
-      background-color: #fafafa;
-      height: 40px;
-      width: 200px;
-      margin: 0 8px 16px;
-      padding: 16px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.2s ease-in-out;
-      line-height: 24px;
-    }
-  
-    .card-container .card:not(:last-child) {
-      margin-right: 0;
-    }
-  
-    .card.card-small {
-      height: 16px;
-      width: 168px;
-    }
-  
-    .card-container .card:not(.highlight-card) {
-      cursor: pointer;
-    }
-  
-    .card-container .card:not(.highlight-card):hover {
-      transform: translateY(-3px);
-      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-    }
-  
-    .card-container .card:not(.highlight-card):hover .material-icons path {
-      fill: rgb(105, 103, 103);
-    }
-  
-    .card.highlight-card {
-      background-color: #1976d2;
-      color: white;
-      font-weight: 600;
-      border: none;
-      width: auto;
-      min-width: 30%;
-      position: relative;
-    }
-  
-    .card.card.highlight-card span {
-      margin-left: 60px;
-    }  
-  
-    /* Responsive Styles */
-    @media screen and (max-width: 767px) {
-  
-      .card-container > *:not(.circle-link) ,
-      .terminal {
-        width: 100%;
-      }
-  
-      .card:not(.highlight-card) {
-        height: 16px;
-        margin: 8px 0;
-      }
-  
-      .card.highlight-card span {
-        margin-left: 72px;
-      }    
-    }
-    .homepageImage {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-  </style>
-  <div>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://use.fontawesome.com/39ac5a0cbe.js"></script>
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  
-  
-  <header class="mb-5">
-    <nav class="navbar-dark navbar-expand-lg navbar bg-dark">
-        <div class="navbar-brand">
-            <h1 class="display-5 text-white"><a class="text-white" href="/">Welcome</a></h1>
-        </div>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                </li>              
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.google.com">LogIn</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://www.google.com">SignUp</a>
-                </li>
-            </ul>
-          </div>
-    </nav>
-  </header> 
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://use.fontawesome.com/39ac5a0cbe.js"></script>
 
-  <div class="content">
-  
-      <img src="assets/images/logo.png" width="50" height="50"> 
-          
-    <div class="container">
-      <!-- <h2 class="text-center mb-5">Welcome to {{ title }}!</h2> -->
-  
-      <div class="row">
-        <div class="col-md-6">
-          <img class = "homepageImage" src="assets/images/exer.jpg" fluid>
-        </div>
-        <div class="col-md-6" >
-          <h4>Success starts with a good health. Have a health goal?</h4>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.  Ut enim
-            ad minim veniam, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-          </p>
-        </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div>
+<app-app-header></app-app-header>
+<div class="content">
+
+    <img src="assets/images/logo.png" width="50" height="50"> 
+        
+  <div class="container">
+    <h2 class="text-center mb-5">Welcome to {{ title }}!</h2>
+
+    <div class="row">
+      <div class="col-md-6">
+        <img class = "homepageImage" src="assets/images/exer.jpg" fluid>
       </div>
-        <div class="row text-center">
-            <div class="col p-5">
-                <h2>You are required to sign in</h2>
-                <hr class="mb-4 mt-3">
-                <a class="btn btn-lg btn-success mb-3 d-block" href="/jobs/createJobs"><i class="fa fa-user"></i> Existing User? Log In</a>
-                <a class="btn btn-lg btn-primary mb-3 d-block" href="/jobs/viewJobs"><i class="fa fa-plus"></i> New User? Sign Up</a>
-            </div>
-        </div>
+      <div class="col-md-6" >
+        <h4>Success starts with a good health. Have a health goal?</h4>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.  Ut enim
+          ad minim veniam, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+        </p>
+      </div>
     </div>
-    
-    <div class="card-container">
-      <a class="card"   href="/dashboard">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        <span>Gym Exercises</span>
-      </a>
-      <a class="card"   href="google.com">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        <span>Yoga</span>
-      </a>
-      <a class="card"  href="http://www.google.com">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        <span>Contact Us</span>
-      </a>   
-      <a class="card"   href="google.com">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-        <span>About Us</span>
-      </a>
-      
-    </div>
-    <footer>
-      Made with&nbsp;<i style="color:red; font-size:20px" class="fa">&#xf004;</i>&nbsp;at DAL, 2020 &#169;.     
-    </footer>
+      <div class="row text-center">
+          <div class="col p-5">
+              <h2>You are required to sign in</h2>
+              <hr class="mb-4 mt-3">
+              <a class="btn btn-lg btn-success mb-3 d-block" href=""><i class="fa fa-user"></i> Existing User? Log In</a>
+              <a class="btn btn-lg btn-primary mb-3 d-block" href=""><i class="fa fa-plus"></i> New User? Sign Up</a>
+          </div>
+      </div>
   </div>
+  
+  <div class="card-container">
+    <a class="card"   href="/dashboard">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>Gym Exercises</span>
+    </a>
+    <a class="card"   href="google.com">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>Yoga</span>
+    </a>
+    <a class="card"  href="http://www.google.com">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>Contact Us</span>
+    </a>   
+    <a class="card"   href="google.com">
+      <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      <span>About Us</span>
+    </a>
+    
+  </div>
+  <footer>
+    Made with&nbsp;<i style="color:red; font-size:20px" class="fa">&#xf004;</i>&nbsp;at DAL, 2020 &#169;.     
+  </footer>
+</div>
 </div>
