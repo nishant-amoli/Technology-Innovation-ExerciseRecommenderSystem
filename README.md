@@ -59,6 +59,9 @@ Step 1) Clone the below repository to get the application code on local machine.
 Step 2) Run the following command to get the React-bootstrap
 **_ng add @ng-bootstrap/ng-bootstrap_**
 
+Step 3) Run the following command to start the angular application
+**_ng serve_**
+
 ## Running the tests
 
 Step 1) Open the web browser from desktop or mobile.
