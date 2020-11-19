@@ -1,21 +1,23 @@
-Personal information:
+
+
+## Personal information:
 Your Age
 Height
 Weight
 
-Personal preference
+## Personal preference:
 Where to work out
   Gym
   Outdoor
   At home
 
-Personal goals
+## Personal goals
 	fat loss
   increase muscle strength
   Body shaping
   stay healthy
 
-Training parts
+## Training parts
   Arm
   Leg
   Chest
