@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuestionFormComponent } from './survery/question/question-form.component';
+import { CreateExerciseComponent } from './create-exercise/create-exercise.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { QuestionFormComponent } from './survery/question/question-form.componen
     AppHeaderComponent,
     SurveryComponent,
     SurveyFormComponent,
-    QuestionFormComponent
+    QuestionFormComponent,
+    CreateExerciseComponent
   ],
   imports: [
     BrowserModule,
