@@ -21,6 +21,7 @@ import {MatInputModule} from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { QuestionFormComponent } from './survery/question/question-form.component';
 import { CreateExerciseComponent } from './create-exercise/create-exercise.component';
+import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CreateExerciseComponent } from './create-exercise/create-exercise.compo
     SurveryComponent,
     SurveyFormComponent,
     QuestionFormComponent,
-    CreateExerciseComponent
+    CreateExerciseComponent,
+    ExerciseCardComponent
   ],
   imports: [
     BrowserModule,
