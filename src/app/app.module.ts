@@ -22,6 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { QuestionFormComponent } from './survery/question/question-form.component';
 import { CreateExerciseComponent } from './create-exercise/create-exercise.component';
 import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,8 @@ import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
     SurveyFormComponent,
     QuestionFormComponent,
     CreateExerciseComponent,
-    ExerciseCardComponent
+    ExerciseCardComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
