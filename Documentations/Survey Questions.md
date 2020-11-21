@@ -4,6 +4,7 @@
 Your Age  
 Height  
 Weight  
+Gender  
 
 ## Personal preference:
 Where to work out  
