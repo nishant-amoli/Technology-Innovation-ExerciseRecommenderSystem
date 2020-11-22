@@ -1,0 +1,55 @@
+<div [formGroup]="form">
+
+    <mat-card class="survey-card">
+        <mat-card-header>
+            <mat-card-title [attr.for]="question.key">
+                {{question.label}}
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="survey-content">
+
+            <div [ngSwitch]="question.controlType">
+
+                <!-- TextBox -->
+                <div *ngSwitchCase="'text'">
+                    <mat-form-field appearance="fill" style="width: 100%;">
+                        <mat-label>Enter your answer</mat-label>
+                        <input matInput [formControlName]="question.key" [id]="question.key" [type]="question.type">
+                    </mat-form-field>
+                </div>
+
+                <!-- Select -->
+                <div *ngSwitchCase="'select'">
+                    <mat-form-field appearance="fill" style="width: 100%;">
+                    <mat-label>Choose Your Answer</mat-label>
+                    <mat-select [id]="question.key" [formControlName]="question.key">
+                        <mat-option *ngFor="let opt of question.options" [value]="opt.key">
+                            {{opt.value}}
+                        </mat-option>
+                    </mat-select>
+                    </mat-form-field>
+                </div>
+                
+
+                <!-- Radio -->
+                <div *ngSwitchCase="'radio'">
+                    <mat-radio-group class="survey-radio-group" *ngSwitchCase="'radio'"
+                        [formControlName]="question.key">
+                        <mat-radio-button color="primary" *ngFor="let opt of question.options" [value]="opt.key">
+                            {{opt.value}}
+                        </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <!-- CheckBox -->
+                <div class="survey-radio-group" *ngSwitchCase="'checkbox'" [formControlName]="question.key">
+                    <mat-checkbox color='primary' *ngFor="let opt of question.options" [value]="opt.key">
+                        {{opt.value}}
+                    </mat-checkbox>
+                </div>
+
+            </div>
+            <div class="errorMessage" *ngIf="!isValid">{{question.label}} is required</div>
+        </mat-card-content>
+    </mat-card>
+</div>
