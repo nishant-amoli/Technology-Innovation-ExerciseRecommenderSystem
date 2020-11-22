@@ -11,3 +11,8 @@
   color: blue;
   font-size: smaller;
 }
+.signUp-img{
+  width: 100%;
+  max-width: 500;
+  height: auto;
+}
