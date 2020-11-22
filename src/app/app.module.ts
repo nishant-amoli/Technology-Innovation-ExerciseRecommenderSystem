@@ -10,6 +10,7 @@ import { UserDashboardComponent } from './user-dashboard/user-dashboard.componen
 import { HomePageComponent } from './home-page/home-page.component';
 import { AppHeaderComponent } from './app-header/app-header.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AdvertisementComponent } from './advertisement/advertisement.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterComponent,
     UserDashboardComponent,
     HomePageComponent,
-    AppHeaderComponent
+    AppHeaderComponent,
+    AdvertisementComponent
   ],
   imports: [
     BrowserModule,

@@ -37,6 +37,9 @@ export class RegisterComponent implements OnInit {
   
   onSubmit(){
     this.submitted = true;
+    if(this.registerForm.valid){
+      this.router.navigate(['/login']);
+    }
   }
 
 }

@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.css']
 })
 export class AppHeaderComponent implements OnInit {
-  
+  isUserLoggedIn = true;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  
+  UserLoggedIn(){
+    console.log("entered")
+    this.isUserLoggedIn =true;
+  }
 }

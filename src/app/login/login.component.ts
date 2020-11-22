@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
 
@@ -10,6 +10,9 @@ import {Router} from '@angular/router';
 export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     submitted = false;
+    
+    @Output()
+    login = new EventEmitter<void>();
   constructor(
     private formBuilder: FormBuilder,
     private router:Router
@@ -28,5 +31,9 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
   onSubmit(){
     this.submitted = true;
+    if(this.loginForm.valid){
+      this.router.navigate(['/']);
+    }
+    this.login.emit();
   }
 }
