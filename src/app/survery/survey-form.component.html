@@ -1,0 +1,22 @@
+<!--  Reference: https://angular.io/guide/dynamic-form -->
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+  
+      <div *ngFor="let question of questions" class="survey-question">
+        <app-question [question]="question" [form]="form"></app-question>
+      </div>
+  
+      <div class="form-row justify-content-center p-3">
+        <button mat-flat-button color="primary" 
+            type="submit" [disabled]="!form.valid" 
+            style="width: 10em; margin: 5px;">
+            Save
+        </button>
+        <button mat-stroked-button color="primary" type="reset"  style="width: 10em; margin: 5px;" >Cancel</button>
+      </div>
+    </form>
+  
+    <div *ngIf="payLoad" class="form-row">
+      <strong>Saved the following values</strong><br>{{payLoad}}
+    </div>
+</div>
