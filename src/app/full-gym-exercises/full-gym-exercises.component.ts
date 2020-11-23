@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ExerciseCard } from '../exercise-card/exercise-card';
 @Component({
-  selector: 'app-user-dashboard',
-  templateUrl: './user-dashboard.component.html',
-  styleUrls: ['./user-dashboard.component.css']
+  selector: 'app-full-gym-exercises',
+  templateUrl: './full-gym-exercises.component.html',
+  styleUrls: ['./full-gym-exercises.component.css']
 })
-export class UserDashboardComponent implements OnInit {
-  active = 1;
+export class FullGymExercisesComponent implements OnInit {
   exercises: Array<ExerciseCard> = [];
 
   constructor() { }
@@ -51,6 +50,5 @@ export class UserDashboardComponent implements OnInit {
 
     return fetchExercises;
   }
-
 
 }
