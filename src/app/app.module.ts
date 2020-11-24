@@ -26,6 +26,7 @@ import { CreateExerciseComponent } from './create-exercise/create-exercise.compo
 import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginService } from './login/LoginService';
 
 @NgModule({
   declarations: [
@@ -59,7 +60,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatInputModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
