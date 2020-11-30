@@ -14,6 +14,7 @@ export class UserDashboardComponent implements OnInit {
   friExercises: Array<ExerciseCard> = [];
   satExercises: Array<ExerciseCard> = [];
   sunExercises: Array<ExerciseCard> = [];
+  allExercises: Array<ExerciseCard> = [];
 
   constructor() { }
 
@@ -30,6 +31,21 @@ export class UserDashboardComponent implements OnInit {
     this.friExercises = this.getFriExercise();
     this.satExercises = this.getSatExercise();
     // this.sunExercises = this.getSunExercise();
+    this.allExercises = this.getAllExercise();
+  }
+
+  getAllExercise(): ExerciseCard[] {
+    let fetchExercises: Array<ExerciseCard> = [];
+
+    fetchExercises.concat(this.monExercises);
+    fetchExercises.concat(this.tueExercises);
+    fetchExercises.concat(this.wedExercises);
+    fetchExercises.concat(this.thuExercises);
+    fetchExercises.concat(this.friExercises);
+    fetchExercises.concat(this.satExercises);
+    fetchExercises.concat(this.sunExercises);
+
+    return fetchExercises;
   }
 
   getMonExercise(): ExerciseCard[] {
