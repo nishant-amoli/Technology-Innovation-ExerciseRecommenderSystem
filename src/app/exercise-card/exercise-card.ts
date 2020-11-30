@@ -5,4 +5,5 @@ export class ExerciseCard {
     content: string;
     img: string;
     isAdmin: boolean = false;
+    isGymRequired = true;
 }
