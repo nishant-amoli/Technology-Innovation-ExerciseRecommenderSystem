@@ -8,13 +8,13 @@
         <br/>        
         <h2>Monday</h2><hr>
         <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
+          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of monExercises">
               <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
           </div>
       </div>
         <h2>Tuesday</h2><hr>
         <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
+          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of tueExercises">
               <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
           </div>
       </div>
@@ -22,18 +22,18 @@
         <p>******* Rest Day *******</p>
         <h2>Thursday</h2><hr>
         <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
+          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of thuExercises">
               <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
           </div>
       </div>
         <h2>Friday</h2><hr>
         <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
+          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of friExercises">
               <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
           </div>
       </div>
         <h2>Saturday</h2><hr><div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
+          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of satExercises">
               <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
           </div>
       </div>
