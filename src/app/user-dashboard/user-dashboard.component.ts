@@ -1,12 +1,15 @@
+
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ExerciseCard } from '../exercise-card/exercise-card';
+
 @Component({
   selector: 'app-user-dashboard',
   templateUrl: './user-dashboard.component.html',
   styleUrls: ['./user-dashboard.component.css']
 })
 export class UserDashboardComponent implements OnInit {
-  active = 1;
+  active;
   monExercises: Array<ExerciseCard> = [];
   tueExercises: Array<ExerciseCard> = [];
   wedExercises: Array<ExerciseCard> = [];
@@ -16,14 +19,34 @@ export class UserDashboardComponent implements OnInit {
   sunExercises: Array<ExerciseCard> = [];
   allExercises: Array<ExerciseCard> = [];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.initExercise();
-    // this.exercises = this.getExerciseList();
+        // this.exercises = this.getExerciseList();
     // console.log(this.exercises);
+
+    this.route.queryParams.forEach( params =>{
+      if(params.active){
+        this.active = +params.active;
+        console.log(this.active);
+      }
+    });
+    if(!this.active){
+      this.active = 1;
+    }
+    this.initExercise();
+    //   .filter(params => params.active)
+    //   .subscribe(params => {
+    //     console.log(params); // { order: "popular" }
+
+    //     this.active = params.active;
+    //     console.log(this.active); // popular
+    //   }
+    // );
   }
   initExercise() {
+    console.log("Init:" + this.active);
+    
     this.monExercises = this.getMonExercise();
     this.tueExercises = this.getTueExercise();
     // this.wedExercises = this.getWedExercise();
