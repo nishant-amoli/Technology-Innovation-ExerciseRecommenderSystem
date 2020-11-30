@@ -3,6 +3,7 @@ import { of } from 'rxjs';
 import { Question } from './question';
 import { CheckboxQuestion } from './question-checkbox';
 import { RadioQuestion } from './question-radio';
+import { RadioNoteQuestion } from './question-radio-note';
 import { SelectQuestion } from './question-select';
 import { TextQuestion } from './question-text';
 
@@ -153,7 +154,7 @@ export class QuestionService {
           }),
 
            // 14. What is Your Metabolism/Body Type
-           new RadioQuestion({
+           new RadioNoteQuestion({
             key: 'What is Your Metabolism/Body Type',
             label: 'What is Your Metabolism/Body Type?',
             options: [
@@ -161,6 +162,9 @@ export class QuestionService {
               {key: 'Endomorph',  value: 'Endomorph'},
               {key: 'Mesomorph ',  value: 'Mesomorph '}
             ],
+            notes: ['An ectomorph tends to be thin, and struggles to gain weight as either body fat or muscle. They can eat piles of food and stay looking the same, even when gaining muscular weight is their biggest goal. People who battle to gain muscle are often known as "hardgainers."',
+            'The endomorph tends to gain weight and keep it on. Their build is a little wider than an ectomorph or mesomorph, with a thick rib cage, wide hips, and shorter limbs. They may have more muscle than either of the other body types, but they often struggle to gain it without significant amounts of accompanying body fat. If you ever feel like you gain 5 pounds simply walking by a donut shop, you may be an endomorph.', 
+            'The mesomorph has a middle-of-the-road build that takes the best of both worlds. They tend to have wide shoulders, a narrow waist, relatively thin joints, and round muscle bellies.'],
             order: 14
           }),
 

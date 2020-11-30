@@ -41,6 +41,19 @@
                     </mat-radio-group>
                 </div>
 
+                <!-- Radio Note -->
+                <div *ngSwitchCase="'radio-note'">
+                    <mat-radio-group class="survey-radio-group" *ngSwitchCase="'radio-note'"
+                        [formControlName]="question.key">
+                        <mat-radio-button color="primary" *ngFor="let opt of question.options" [value]="opt.key">
+                            {{opt.value}}
+                        </mat-radio-button>
+                        <div class="row" *ngFor="let note of question.notes">
+                            <caption >{{note}}</caption>
+                        </div>
+                    </mat-radio-group>
+                </div>
+
                 <!-- CheckBox -->
                 <div class="survey-radio-group" *ngSwitchCase="'checkbox'" [formControlName]="question.key">
                     <mat-checkbox color='primary' *ngFor="let opt of question.options" [value]="opt.key">
