@@ -21,8 +21,8 @@ export class QuestionService {
             options: [
               {key: 'male',  value: 'Male'},
               {key: 'female',  value: 'Female'},
-              {key: 'LGBTQ',   value: 'LGBTQ+'},
-              {key: 'do not wish to answer', value: 'Do not wish to answer'}
+              // {key: 'LGBTQ',   value: 'LGBTQ+'},
+              // {key: 'do not wish to answer', value: 'Do not wish to answer'}
             ],
             order: 1
           }),
