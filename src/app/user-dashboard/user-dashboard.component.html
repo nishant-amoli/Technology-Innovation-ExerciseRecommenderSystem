@@ -1,72 +1,94 @@
 <app-app-header></app-app-header>
-  <div class="container">
-    <h1>User's Dashboard</h1>
-  <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-    <li [ngbNavItem]="1">
-      <a ngbNavLink>Recommended Exercises</a>
-      <ng-template ngbNavContent>  
-        <br/>        
-        <h2>Monday</h2><hr>
-        <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of monExercises">
-              <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
-          </div>
-      </div>
-        <h2>Tuesday</h2><hr>
-        <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of tueExercises">
-              <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
-          </div>
-      </div>
-        <h2>Wednesday</h2><hr>
-        <p>******* Rest Day *******</p>
-        <h2>Thursday</h2><hr>
-        <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of thuExercises">
-              <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
-          </div>
-      </div>
-        <h2>Friday</h2><hr>
-        <div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of friExercises">
-              <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
-          </div>
-      </div>
-        <h2>Saturday</h2><hr><div class="row" style="margin-top:0;">
-          <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of satExercises">
-              <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
-          </div>
-      </div>
-        <h2>Sunday</h2><hr>
-        <p>******* Rest Day *******</p>
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-      <a ngbNavLink>Survey Response</a>
-      <ng-template ngbNavContent>
-        <br/>
-        <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-          farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
-          ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar
-          helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson
-          8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester
-          stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="3">
-      <a ngbNavLink>All Gym Exercises</a>
-      <ng-template ngbNavContent>
-        <app-full-gym-exercises></app-full-gym-exercises>
-      </ng-template>
-    </li>
-    <li [ngbNavItem]="4">
-        <a ngbNavLink>Yoga Exercises/ No Equipment</a>
-        <ng-template ngbNavContent>
-          <app-no-gym-exercises></app-no-gym-exercises>
-        </ng-template>
-      </li>
-  </ul>
 
-  <div [ngbNavOutlet]="nav" class="mt-2"></div>
-  
-</div>
+<div class="container">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-1" style="padding-right: 1em;">
+                <app-advertisement></app-advertisement><br />
+                <app-advertisement></app-advertisement>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h1>User's Dashboard</h1>
+                <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+                    <li [ngbNavItem]="1">
+                        <a ngbNavLink>Recommended Exercises</a>
+                        <ng-template ngbNavContent>
+                            <br />
+                            <h2>Monday</h2>
+                            <hr>
+                            <div class="row" style="margin-top:0;">
+                                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of monExercises">
+                                    <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)">
+                                    </app-exercise-card>
+                                </div>
+                            </div>
+                            <h2>Tuesday</h2>
+                            <hr>
+                            <div class="row" style="margin-top:0;">
+                                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of tueExercises">
+                                    <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)">
+                                    </app-exercise-card>
+                                </div>
+                            </div>
+                            <h2>Wednesday</h2>
+                            <hr>
+                            <p>******* Rest Day *******</p>
+                            <h2>Thursday</h2>
+                            <hr>
+                            <div class="row" style="margin-top:0;">
+                                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of thuExercises">
+                                    <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)">
+                                    </app-exercise-card>
+                                </div>
+                            </div>
+                            <h2>Friday</h2>
+                            <hr>
+                            <div class="row" style="margin-top:0;">
+                                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of friExercises">
+                                    <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)">
+                                    </app-exercise-card>
+                                </div>
+                            </div>
+                            <h2>Saturday</h2>
+                            <hr>
+                            <div class="row" style="margin-top:0;">
+                                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of satExercises">
+                                    <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)">
+                                    </app-exercise-card>
+                                </div>
+                            </div>
+                            <h2>Sunday</h2>
+                            <hr>
+                            <p>******* Rest Day *******</p>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="2">
+                        <a ngbNavLink>Survey Response</a>
+                        <ng-template ngbNavContent>
+                            <br />
+                            <app-survery></app-survery>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="3">
+                        <a ngbNavLink>All Gym Exercises</a>
+                        <ng-template ngbNavContent>
+                            <app-full-gym-exercises></app-full-gym-exercises>
+                        </ng-template>
+                    </li>
+                    <li [ngbNavItem]="4">
+                        <a ngbNavLink>Yoga Exercises/ No Equipment</a>
+                        <ng-template ngbNavContent>
+                            <app-no-gym-exercises></app-no-gym-exercises>
+                        </ng-template>
+                    </li>
+                </ul>
+                <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+            </div>
+        </div>
+
+
+
+    </div>
