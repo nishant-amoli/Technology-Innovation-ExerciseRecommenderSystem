@@ -26,6 +26,7 @@ import { CreateExerciseComponent } from './create-exercise/create-exercise.compo
 import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginService } from './login/LoginService';
 import { FullGymExercisesComponent } from './full-gym-exercises/full-gym-exercises.component';
 import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.component';
 import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
@@ -65,7 +66,7 @@ import { CreateAdvertisementComponent } from './create-advertisement/create-adve
     MatInputModule,
     FlexLayoutModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

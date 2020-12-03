@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms'
+import { LoginService } from 'app/login/LoginService';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private router:Router
+    private router:Router,
+    public loginService: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +41,7 @@ export class RegisterComponent implements OnInit {
     this.submitted = true;
     if(this.registerForm.valid){
       // this.router.navigate(['/login']);
+      this.loginService.isLogin = true;
       this.router.navigate(['/dashboard'], { queryParams: { active: 2}});
     }
   }
