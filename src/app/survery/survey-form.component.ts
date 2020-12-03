@@ -3,6 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Question } from './question/question';
 import { QuestionControlService } from './question/question-control.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-dynamic-form',
@@ -15,7 +16,8 @@ export class SurveyFormComponent implements OnInit {
     form: FormGroup;
     payLoad = '';
 
-    constructor(private qcs: QuestionControlService) { }
+    constructor(private qcs: QuestionControlService,
+        private router:Router) { }
 
     ngOnInit() {
         // console.log(this.questions);
@@ -25,6 +27,7 @@ export class SurveyFormComponent implements OnInit {
     onSubmit() {
         this.payLoad = JSON.stringify(this.form.getRawValue());
         if (this.payLoad) {
+            // Save payLoad to database.
             console.log(this.payLoad);
         }
     }
