@@ -1,35 +1,35 @@
 <!-- <app-app-header></app-app-header> -->
 <div class="container">
-    <form class="form-exercise">
-        <div class="exercise-element">
+    <form class="form-advertise">
+        <div class="advertise-element">
             <mat-form-field appearance="fill" style="width: 100%;">
-                <mat-label>Enter Exercise Name</mat-label>
-                <input matInput required #Name="ngModel" ngModel [(ngModel)]="exerciseObj.exerciseName" id="Name"
-                    name="Exercise Name">
+                <mat-label>Enter Advertisement Name</mat-label>
+                <input matInput required #Name="ngModel" ngModel [(ngModel)]="adObj.advertisementName" id="Name"
+                    name="Advertisement Name">
                 <mat-error *ngIf="Name.touched && !Name.valid">
-                    <div *ngIf="Name.errors.required">Exercise Name is required
+                    <div *ngIf="Name.errors.required">Advertisement Name is required
                     </div>
                 </mat-error>
             </mat-form-field>
         </div>
-        <div class="exercise-element">
+        <div class="advertise-element">
             <mat-form-field appearance="fill" style="width: 100%;">
-                <mat-label>Enter Exercise Type</mat-label>
-                <input matInput required #Type="ngModel" ngModel [(ngModel)]="exerciseObj.exerciseType" id="Type"
-                    name="Exercise Type">
+                <mat-label>Enter Advertisement Type</mat-label>
+                <input matInput required #Type="ngModel" ngModel [(ngModel)]="adObj.advertisementType" id="Type"
+                    name="Advertisement Type">
                 <mat-error *ngIf="Type.touched && !Type.valid">
-                    <div *ngIf="Type.errors.required">Exercise Type is required
+                    <div *ngIf="Type.errors.required">Advertisement Type is required
                     </div>
                 </mat-error>
             </mat-form-field>
         </div>
         <div style="text-align: left; margin-top: 5px;">
-            <button type="button" mat-flat-button color="primary" (click)="fileInput.click()">Upload Exercise Image</button>
+            <button type="button" mat-flat-button color="primary" (click)="fileInput.click()">Upload Advertisement Image</button>
             <!-- <label class="label"><b>Upload Image for your blog</b></label><br> -->
             <input #fileInput id="file" type="file" hidden (change)="onImgChange($event)" required>
          </div>
         <div class="form-row justify-content-center p-3">
-            <button mat-flat-button color="primary" type="submit" (click)="createExcercise()"
+            <button mat-flat-button color="primary" type="submit" (click)="createAdvertisement()"
                 [disabled]="!Name.valid || !Type.valid" style="width: 10em; margin: 5px;">
                 Create
             </button>

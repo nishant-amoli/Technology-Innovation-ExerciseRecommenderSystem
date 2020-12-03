@@ -28,6 +28,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FullGymExercisesComponent } from './full-gym-exercises/full-gym-exercises.component';
 import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.component';
+import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.com
     ExerciseCardComponent,
     AdminPageComponent,
     FullGymExercisesComponent,
-    NoGymExercisesComponent
+    NoGymExercisesComponent,
+    CreateAdvertisementComponent
   ],
   imports: [
     BrowserModule,
