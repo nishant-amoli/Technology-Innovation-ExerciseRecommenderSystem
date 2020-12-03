@@ -9,6 +9,8 @@ export class Question<T> {
     controlType: string;
     type: string;
     options: {key: string, value: string}[];
+    notes: string[];
+    ans: any;
   
     constructor(options: {
         value?: T;
@@ -19,6 +21,8 @@ export class Question<T> {
         controlType?: string;
         type?: string;
         options?: {key: string, value: string}[];
+        notes?: string[];
+        ans?: any;
       } = {}) {
       this.value = options.value;
       this.key = options.key || '';
@@ -28,5 +32,7 @@ export class Question<T> {
       this.controlType = options.controlType || '';
       this.type = options.type || '';
       this.options = options.options || [];
+      this.notes = options.notes || [];
+      this.ans = options.ans || '';
     }
   }

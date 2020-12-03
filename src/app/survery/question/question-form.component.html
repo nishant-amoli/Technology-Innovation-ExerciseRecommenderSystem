@@ -14,7 +14,7 @@
                 <div *ngSwitchCase="'text'">
                     <mat-form-field appearance="fill" style="width: 100%;">
                         <mat-label>Enter your answer</mat-label>
-                        <input matInput [formControlName]="question.key" [id]="question.key" [type]="question.type">
+                        <input matInput [formControlName]="question.key" [id]="question.key" [type]="question.type" [(ngModel)]="question.ans">
                     </mat-form-field>
                 </div>
 
@@ -35,9 +35,22 @@
                 <div *ngSwitchCase="'radio'">
                     <mat-radio-group class="survey-radio-group" *ngSwitchCase="'radio'"
                         [formControlName]="question.key">
-                        <mat-radio-button color="primary" *ngFor="let opt of question.options" [value]="opt.key">
+                        <mat-radio-button color="primary" *ngFor="let opt of question.options" [value]="opt.key" [checked]="opt.key == question.ans">
                             {{opt.value}}
                         </mat-radio-button>
+                    </mat-radio-group>
+                </div>
+
+                <!-- Radio Note -->
+                <div *ngSwitchCase="'radio-note'">
+                    <mat-radio-group class="survey-radio-group" *ngSwitchCase="'radio-note'"
+                        [formControlName]="question.key">
+                        <mat-radio-button color="primary" *ngFor="let opt of question.options" [value]="opt.key" [checked]="opt.key == question.ans">
+                            {{opt.value}}
+                        </mat-radio-button>
+                        <div class="row" *ngFor="let note of question.notes">
+                            <caption >{{note}}</caption>
+                        </div>
                     </mat-radio-group>
                 </div>
 

@@ -27,6 +27,9 @@ import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LoginService } from './login/LoginService';
+import { FullGymExercisesComponent } from './full-gym-exercises/full-gym-exercises.component';
+import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.component';
+import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { LoginService } from './login/LoginService';
     QuestionFormComponent,
     CreateExerciseComponent,
     ExerciseCardComponent,
-    AdminPageComponent
+    AdminPageComponent,
+    FullGymExercisesComponent,
+    NoGymExercisesComponent,
+    CreateAdvertisementComponent
   ],
   imports: [
     BrowserModule,
