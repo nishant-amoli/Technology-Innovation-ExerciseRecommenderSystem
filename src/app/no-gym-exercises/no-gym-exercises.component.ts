@@ -45,21 +45,21 @@ export class NoGymExercisesComponent implements OnInit {
     let exe3: ExerciseCard = new ExerciseCard();
     exe3.name = "Triangle";
     exe3.content = "Triangle is a wonderful standing posture to stretch the sides of the waist, open up the lungs, strengthen the legs and tone the entire body. Start standing with your feet one leg's-length apart. Open and stretch your arms to the sides at shoulder height. Turn your right foot out 90 degrees and your left toes in about 45 degrees. Engage your quadriceps and abdominals as you hinge to the side over your right leg. Place your right hand down on your ankle, shin or knee (or a block if you have one) and lift your left arm up to the ceiling. Turn your gaze up to the top hand and hold for 5-8 breaths. Lift up to stand and repeat on the opposite side. Tip: I like to imagine I’m stuck between two narrow walls when I’m in triangle pose.";
-    exe3.img="";
+    exe3.img="assets/images/yoga/exe3.jpg";
     exe3.isAdmin = false;
     exe3.isGymRequired = false;
 
     let exe4: ExerciseCard = new ExerciseCard();
     exe4.name = "Tree";
     exe4.content = "Tree is an awesome standing balance for beginners to work on to gain focus and clarity and learn to breathe while standing and keeping the body balanced on one foot. Start with your feet together and place your right foot on your inner left upper thigh. Press your hands in prayer and find a spot in front of you that you can hold in a steady gaze. Hold and breathe for 8-10 breaths then switch sides. Make sure you don’t lean into the standing leg and keep your abdominals engaged and shoulders relaxed.";
-    exe4.img="";
+    exe4.img="assets/images/yoga/exe4.jpg";
     exe4.isAdmin = false;
     exe4.isGymRequired = false;
 
     let exe5: ExerciseCard = new ExerciseCard();
     exe5.name = "Child's Pose";
     exe5.content = "Everyone needs a good resting pose and Child’s pose is an awesome one not just for beginners but for yoga practitioners of all levels. It’s good to learn child’s pose to use when you’re fatigued in Down Dog, before bed at night to work out the kinks, or anytime you need a mental break and stress/tension relief. Start on all fours then bring your knees and feet together as you sit your butt back to your heels and stretch your arms forward. Lower your forehead to the floor (or block or pillow or blanket) and let your entire body release. Hold for as long as you wish! ";
-    exe5.img="";
+    exe5.img="assets/images/yoga/exe5.gif";
     exe5.isAdmin = false;
     exe5.isGymRequired = false;
 
