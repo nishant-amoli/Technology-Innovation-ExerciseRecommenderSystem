@@ -14,24 +14,24 @@ export class QuestionService {
 
       let answers = [];
 
-      let ans1 = {
-        key: 'Gender',
-        value: 'male'
-      };
+      // let ans1 = {
+      //   key: 'Gender',
+      //   value: 'male'
+      // };
 
-      let ans2 = {
-        key: 'Age',
-        value: '18-25'
-      };
+      // let ans2 = {
+      //   key: 'Age',
+      //   value: '18-25'
+      // };
 
-      let ans3 = {
-        key: 'Amount',
-        value: '5'
-      };
+      // let ans3 = {
+      //   key: 'Amount',
+      //   value: '5'
+      // };
 
-      answers.push(ans1);
-      answers.push(ans2);
-      answers.push(ans3);
+      // answers.push(ans1);
+      // answers.push(ans2);
+      // answers.push(ans3);
 
       return answers;
     }
