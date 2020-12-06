@@ -23,6 +23,17 @@
                 </mat-error>
             </mat-form-field>
         </div>
+        <div class="exercise-element">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>Enter Exercise Description</mat-label>
+                <input matInput required #Desc="ngModel" ngModel [(ngModel)]="exerciseObj.exerciseDesc" id="Desc"
+                    name="Exercise Description">
+                <mat-error *ngIf="Desc.touched && !Desc.valid">
+                    <div *ngIf="Desc.errors.required">Exercise Description is required
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
         <div style="text-align: left; margin-top: 5px;">
             <button type="button" mat-flat-button color="primary" (click)="fileInput.click()">Upload Exercise Image</button>
             <!-- <label class="label"><b>Upload Image for your blog</b></label><br> -->

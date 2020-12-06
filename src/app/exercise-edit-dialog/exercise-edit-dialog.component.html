@@ -1,0 +1,26 @@
+<h3 mat-dialog-title class="text-center">Edit Exercise Detail</h3>
+<div class="d-flext text-center justify-content-center mb-3">
+    <div mat-dialog-content>
+        <mat-form-field>
+            <mat-label>Exercise Name</mat-label>
+            <input #exerciseName="ngModel" matInput required ngModel name="exerciseName" [(ngModel)]="data.name">
+            <mat-error *ngIf="exerciseName.touched && !exerciseName.valid">
+                <div *ngIf="exerciseName.errors.required">Exercise name is required
+                </div>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Exercise Description</mat-label>
+            <input #exerciseContent="ngModel" matInput required ngModel name="exerciseContent" [(ngModel)]="data.content">
+            <mat-error *ngIf="exerciseContent.touched && !exerciseContent.valid">
+                <div *ngIf="exerciseContent.errors.required">Exercise description is required
+                </div>
+            </mat-error>
+        </mat-form-field>
+    </div>
+    <div mat-dialog-actions class="justify-content-center">
+        <button mat-flat-button	color="primary"  cdkFocusInitial [mat-dialog-close]="data"
+        [disabled]="!exerciseName.valid || !exerciseContent.valid">Edit</button>
+        <button mat-stroked-button color="warn" (click)="onNoClick()">Cancel</button>
+    </div>
+</div>

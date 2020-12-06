@@ -30,6 +30,8 @@ import { LoginService } from './login/LoginService';
 import { FullGymExercisesComponent } from './full-gym-exercises/full-gym-exercises.component';
 import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.component';
 import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
+import { ExerciseEditDialogComponent } from './exercise-edit-dialog/exercise-edit-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,8 @@ import { CreateAdvertisementComponent } from './create-advertisement/create-adve
     AdminPageComponent,
     FullGymExercisesComponent,
     NoGymExercisesComponent,
-    CreateAdvertisementComponent
+    CreateAdvertisementComponent,
+    ExerciseEditDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,8 @@ import { CreateAdvertisementComponent } from './create-advertisement/create-adve
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
   ],
   providers: [LoginService],
   bootstrap: [AppComponent]

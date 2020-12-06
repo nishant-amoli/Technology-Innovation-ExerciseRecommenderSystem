@@ -4,6 +4,7 @@ export class Exercise {
     public exerciseName: string;
     public exerciseType: string;
     public exerciseImg: File;
+    public exerciseDesc: string;
     // public excerciseName: string;
 
     constructor () {  } 
