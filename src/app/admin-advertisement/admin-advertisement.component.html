@@ -1,0 +1,18 @@
+<div>
+    <mat-card class="advertise-card">
+        <mat-card-header>
+            <mat-card-title [attr.for]="advertise.id">
+                {{advertise.name}}
+            </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="advertise.img" alt="Photo of a advertise">
+        <mat-card-content class="advertise-content">
+            <p class="ml-3 font-weight-bold">
+                {{'$'+advertise.price}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions *ngIf="advertise.isAdmin">
+            <button mat-stroked-button color="warn" (click)="delete(advertise.id)">Delete</button>
+          </mat-card-actions>
+    </mat-card>
+</div>

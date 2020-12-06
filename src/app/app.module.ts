@@ -32,6 +32,7 @@ import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.com
 import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
 import { ExerciseEditDialogComponent } from './exercise-edit-dialog/exercise-edit-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AdminAdvertisementComponent } from './admin-advertisement/admin-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     FullGymExercisesComponent,
     NoGymExercisesComponent,
     CreateAdvertisementComponent,
-    ExerciseEditDialogComponent
+    ExerciseEditDialogComponent,
+    AdminAdvertisementComponent
   ],
   imports: [
     BrowserModule,
