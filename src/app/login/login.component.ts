@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     if(this.loginForm.valid){
       //Update LoginService Variables.
-      this.loginService.isLogin = true;
+      this.loginService.login(this.loginForm.controls['username'].value)
       this.router.navigate(['/']);
     }
     // this.login.emit();
