@@ -26,4 +26,10 @@ export class LoginService{
             this.isAdmin = false;
         }
     }
+
+    public logout(){
+        this.isAdmin = false;
+        this.isLogin = false;
+        this.userEmail = '';
+    }
 }

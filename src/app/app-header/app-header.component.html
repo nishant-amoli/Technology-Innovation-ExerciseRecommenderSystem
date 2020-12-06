@@ -34,7 +34,7 @@
             <a class="nav-link" [routerLink]="['/admin']" [routerLinkActive]="['active']">Admin </a>
           </li>
           <li *ngIf="loginService.isLogin" class="nav-item">
-            <a class="nav-link" [routerLink]="['/']" [routerLinkActive]="['active']">Logout </a>
+            <a class="nav-link" (click)="logout()" [routerLinkActive]="['active']">Logout </a>
           </li>
         </ul>
       </div>

@@ -19,4 +19,8 @@ export class AppHeaderComponent implements OnInit {
     console.log("entered")
     this.isUserLoggedIn =true;
   }
+
+  logout(){
+    this.loginService.logout();
+  }
 }
