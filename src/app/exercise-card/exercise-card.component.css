@@ -17,3 +17,9 @@ mat-card img{
     width: 250px; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
     height: 250px;
   }
+
+  .hide {
+    height: 4rem;
+    overflow: hidden;
+    /* padding: 1rem; */
+}
