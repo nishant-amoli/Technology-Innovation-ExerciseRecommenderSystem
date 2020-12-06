@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginService } from '../login/LoginService';
 
 @Component({
@@ -9,8 +10,8 @@ import { LoginService } from '../login/LoginService';
 export class AppHeaderComponent implements OnInit {
   isUserLoggedIn = true;
   constructor(
-    public loginService: LoginService
-    ) { }
+    public loginService: LoginService,
+    private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -22,5 +23,6 @@ export class AppHeaderComponent implements OnInit {
 
   logout(){
     this.loginService.logout();
+    this.router.navigate(['/home']);
   }
 }
