@@ -9,7 +9,7 @@
 <div class="container">
     <h1>Admin Management</h1>
     <div class="row">
-        
+
         <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
             <li [ngbNavItem]="1">
                 <a ngbNavLink>Exercises</a>
@@ -36,12 +36,13 @@
                 <ng-template ngbNavContent>
                     <br />
                     <!-- Display all advertisement from the database. -->
-                    <!-- <div class="row" style="margin-top:0;">
-                                <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of friExercises">
-                                        <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)"></app-exercise-card>
-                                    </div>
-                                </div>
-                            </div> -->
+                    <div class="row" style="margin-top:0;">
+                        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let ad of ads">
+                            <app-admin-advertisement [advertise]="ad" fxFlex="0 1 calc(33.3% - 32px)">
+                            </app-admin-advertisement>
+                        </div>
+                    </div>
+
                 </ng-template>
             </li>
             <li [ngbNavItem]="4">

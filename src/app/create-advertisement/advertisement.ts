@@ -4,6 +4,8 @@ export class Advertisement {
     public advertisementName: string;
     public advertisementType: string;
     public advertisementImg: File;
+    public advertisementPrice: number;
+    public advertisementLink: string;
 
     constructor () {  } 
 }
