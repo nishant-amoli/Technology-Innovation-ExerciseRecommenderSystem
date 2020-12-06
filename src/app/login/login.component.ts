@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
     if(this.loginForm.valid){
       //Update LoginService Variables.
       this.loginService.login(this.loginForm.controls['username'].value)
-      this.router.navigate(['/']);
+      this.router.navigate(['/dashboard']);
     }
     // this.login.emit();
   }
