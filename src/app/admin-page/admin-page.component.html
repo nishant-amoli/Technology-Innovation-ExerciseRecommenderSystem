@@ -1,7 +1,59 @@
-<div>
+<!-- <div>
     <div class="row" style="margin-top:25px;">
         <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
             <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 20px)"></app-exercise-card>
         </div>
+    </div>
+</div> -->
+<app-app-header></app-app-header>
+<div class="container">
+    <h1>Admin Management</h1>
+    <div class="row">
+
+        <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+            <li [ngbNavItem]="1">
+                <a ngbNavLink>Exercises</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <!-- Display all exercises from database -->
+                    <div class="row" style="margin-top:0;">
+                        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let exercise of exercises">
+                            <app-exercise-card [exercise]="exercise" fxFlex="0 1 calc(33.3% - 32px)">
+                            </app-exercise-card>
+                        </div>
+                    </div>
+                </ng-template>
+            </li>
+            <li id="survey" [ngbNavItem]="2">
+                <a ngbNavLink>Create Exercise</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <app-create-exercise></app-create-exercise>
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="3">
+                <a ngbNavLink>Advertisements</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <!-- Display all advertisement from the database. -->
+                    <div class="row" style="margin-top:0;">
+                        <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let ad of ads">
+                            <app-admin-advertisement [advertise]="ad" fxFlex="0 1 calc(33.3% - 32px)">
+                            </app-admin-advertisement>
+                        </div>
+                    </div>
+
+                </ng-template>
+            </li>
+            <li [ngbNavItem]="4">
+                <a ngbNavLink>Create advertisement</a>
+                <ng-template ngbNavContent>
+                    <br />
+                    <app-create-advertisement></app-create-advertisement>
+                </ng-template>
+            </li>
+        </ul>
+        <div [ngbNavOutlet]="nav" class="mt-2"></div>
+
     </div>
 </div>

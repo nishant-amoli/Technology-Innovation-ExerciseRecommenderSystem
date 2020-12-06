@@ -1,6 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Router} from '@angular/router';
+import { LoginService } from './LoginService';
 
 @Component({
   selector: 'app-login',
@@ -11,11 +12,12 @@ export class LoginComponent implements OnInit {
     loginForm: FormGroup;
     submitted = false;
     
-    @Output()
-    login = new EventEmitter<void>();
+    // @Output()
+    // login = new EventEmitter<void>();
   constructor(
     private formBuilder: FormBuilder,
-    private router:Router
+    private router:Router,
+    public loginService: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -32,8 +34,10 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     this.submitted = true;
     if(this.loginForm.valid){
+      //Update LoginService Variables.
+      this.loginService.login(this.loginForm.controls['username'].value)
       this.router.navigate(['/']);
     }
-    this.login.emit();
+    // this.login.emit();
   }
 }

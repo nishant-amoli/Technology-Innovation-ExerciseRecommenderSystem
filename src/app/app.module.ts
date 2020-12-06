@@ -26,8 +26,13 @@ import { CreateExerciseComponent } from './create-exercise/create-exercise.compo
 import { ExerciseCardComponent } from './exercise-card/exercise-card.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { LoginService } from './login/LoginService';
 import { FullGymExercisesComponent } from './full-gym-exercises/full-gym-exercises.component';
 import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.component';
+import { CreateAdvertisementComponent } from './create-advertisement/create-advertisement.component';
+import { ExerciseEditDialogComponent } from './exercise-edit-dialog/exercise-edit-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { AdminAdvertisementComponent } from './admin-advertisement/admin-advertisement.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +50,10 @@ import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.com
     ExerciseCardComponent,
     AdminPageComponent,
     FullGymExercisesComponent,
-    NoGymExercisesComponent
+    NoGymExercisesComponent,
+    CreateAdvertisementComponent,
+    ExerciseEditDialogComponent,
+    AdminAdvertisementComponent
   ],
   imports: [
     BrowserModule,
@@ -61,9 +69,10 @@ import { NoGymExercisesComponent } from './no-gym-exercises/no-gym-exercises.com
     MatFormFieldModule,
     BrowserAnimationsModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

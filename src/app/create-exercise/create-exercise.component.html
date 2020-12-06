@@ -1,4 +1,4 @@
-<app-app-header></app-app-header>
+<!-- <app-app-header></app-app-header> -->
 <div class="container">
     <form class="form-exercise">
         <div class="exercise-element">
@@ -19,6 +19,17 @@
                     name="Exercise Type">
                 <mat-error *ngIf="Type.touched && !Type.valid">
                     <div *ngIf="Type.errors.required">Exercise Type is required
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="exercise-element">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>Enter Exercise Description</mat-label>
+                <input matInput required #Desc="ngModel" ngModel [(ngModel)]="exerciseObj.exerciseDesc" id="Desc"
+                    name="Exercise Description">
+                <mat-error *ngIf="Desc.touched && !Desc.valid">
+                    <div *ngIf="Desc.errors.required">Exercise Description is required
                     </div>
                 </mat-error>
             </mat-form-field>

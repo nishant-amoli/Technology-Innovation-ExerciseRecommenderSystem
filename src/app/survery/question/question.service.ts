@@ -10,6 +10,31 @@ import { TextQuestion } from './question-text';
 @Injectable()
 export class QuestionService {
 
+    loadAnswersOfCurrentUser(): {key: string, value: string}[]{
+
+      let answers = [];
+
+      // let ans1 = {
+      //   key: 'Gender',
+      //   value: 'male'
+      // };
+
+      // let ans2 = {
+      //   key: 'Age',
+      //   value: '18-25'
+      // };
+
+      // let ans3 = {
+      //   key: 'Amount',
+      //   value: '5'
+      // };
+
+      // answers.push(ans1);
+      // answers.push(ans2);
+      // answers.push(ans3);
+
+      return answers;
+    }
     getQuestions() {
 
         const questions: Question<string>[] = [
@@ -250,6 +275,17 @@ export class QuestionService {
             //     order: 4
             //   })
         ];
+
+        let answers = this.loadAnswersOfCurrentUser();
+        if (answers) {
+          questions.forEach(q => {
+            answers.forEach(ans => {
+              if (q.key == ans.key) {
+                q.ans = ans.value;
+              }
+            })
+          })
+        }
 
         // return of(questions.sort((a, b) => a.order - b.order));
         return of(questions);

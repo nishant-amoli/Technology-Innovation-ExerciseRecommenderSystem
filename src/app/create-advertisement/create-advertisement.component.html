@@ -1,0 +1,50 @@
+<!-- <app-app-header></app-app-header> -->
+<div class="container">
+    <form class="form-advertise">
+        <div class="advertise-element">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>Enter Advertisement Name</mat-label>
+                <input matInput required #Name="ngModel" ngModel [(ngModel)]="adObj.advertisementName" id="Name"
+                    name="Advertisement Name">
+                <mat-error *ngIf="Name.touched && !Name.valid">
+                    <div *ngIf="Name.errors.required">Advertisement Name is required
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="advertise-element">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>Enter Advertisement Link</mat-label>
+                <input matInput required #Link="ngModel" ngModel [(ngModel)]="adObj.advertisementLink" id="Link"
+                    name="Advertisement Link">
+                <mat-error *ngIf="Link.touched && !Link.valid">
+                    <div *ngIf="Link.errors.required">Advertisement Link is required
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div class="advertise-element">
+            <mat-form-field appearance="fill" style="width: 100%;">
+                <mat-label>Enter Advertisement Price</mat-label>
+                <input matInput required inputmode="numeric" #Price="ngModel" ngModel [(ngModel)]="adObj.advertisementPrice" id="Price"
+                    name="Advertisement Price">
+                <mat-error *ngIf="Price.touched && !Price.valid">
+                    <div *ngIf="Price.errors.required">Advertisement Price is required
+                    </div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div style="text-align: left; margin-top: 5px;">
+            <button type="button" mat-flat-button color="primary" (click)="fileInput.click()">Upload Advertisement Image</button>
+            <!-- <label class="label"><b>Upload Image for your blog</b></label><br> -->
+            <input #fileInput id="file" type="file" hidden (change)="onImgChange($event)" required>
+         </div>
+        <div class="form-row justify-content-center p-3">
+            <button mat-flat-button color="primary" type="submit" (click)="createAdvertisement()"
+                [disabled]="!Name.valid || !Link.valid || !Price.valid" style="width: 10em; margin: 5px;">
+                Create
+            </button>
+            <button mat-stroked-button color="primary" type="reset" style="width: 10em; margin: 5px;">Cancel</button>
+        </div>
+    </form>
+</div>
