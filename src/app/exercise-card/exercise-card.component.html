@@ -7,13 +7,20 @@
         </mat-card-header>
         <img mat-card-image [src]="exercise.img" alt="Photo of a exercise">
         <mat-card-content class="exercise-content">
-            <p>
-                {{exercise.content}}
-            </p>
+            <div [ngClass]="{'hide': isHide}">
+                <p>
+                    {{exercise.content}}
+                </p>
+            </div>
+            <div class="row justify-content-end pr-3 text-primary">
+                <p (click)="showHide()">
+                    {{ isHide ? 'Read More': 'Show Less' }}
+                </p>
+            </div>
         </mat-card-content>
         <mat-card-actions *ngIf="exercise.isAdmin">
-            <button mat-flat-button	color="primary" (click)="editExercise(exercise)">Edit</button>
+            <button mat-flat-button color="primary" (click)="editExercise(exercise)">Edit</button>
             <button mat-stroked-button color="warn" (click)="delete(exercise.id)">Delete</button>
-          </mat-card-actions>
+        </mat-card-actions>
     </mat-card>
 </div>
