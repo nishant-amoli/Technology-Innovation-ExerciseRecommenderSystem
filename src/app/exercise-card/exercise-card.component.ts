@@ -12,23 +12,28 @@ import { ExerciseServiceService } from './exercise-service.service';
 export class ExerciseCardComponent implements OnInit {
 
   @Input() exercise: ExerciseCard;
-  
+  isHide = true;
+
   constructor(private exerciseService: ExerciseServiceService,
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  delete(id: number){
-    this.exerciseService.deleteExercise(id); 
+  showHide() {
+    this.isHide = !this.isHide;
   }
 
-  editExercise(exercise: ExerciseCard){
+  delete(id: number) {
+    this.exerciseService.deleteExercise(id);
+  }
+
+  editExercise(exercise: ExerciseCard) {
 
     let editExercise = new ExerciseCard();
     editExercise.id = exercise.id;
-    editExercise.name = ''+exercise.name;
-    editExercise.content = ''+exercise.content;
+    editExercise.name = '' + exercise.name;
+    editExercise.content = '' + exercise.content;
 
     const dialogRef = this.dialog.open(ExerciseEditDialogComponent, {
       width: '300px',
@@ -36,7 +41,7 @@ export class ExerciseCardComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      if(result && result.id){      
+      if (result && result.id) {
         this.exerciseService.edit(result);
       }
     });
