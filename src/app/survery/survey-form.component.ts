@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Question } from './question/question';
 import { QuestionControlService } from './question/question-control.service';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-dynamic-form',
@@ -17,7 +17,7 @@ export class SurveyFormComponent implements OnInit {
     payLoad = '';
 
     constructor(private qcs: QuestionControlService,
-        private router:Router) { }
+        private router: Router) { }
 
     ngOnInit() {
         // console.log(this.questions);
@@ -29,7 +29,9 @@ export class SurveyFormComponent implements OnInit {
         if (this.payLoad) {
             // Save payLoad to database.
             //console.log(this.payLoad);
-            this.router.navigate(['/dashboard'], { queryParams: { active: 1}});
+            this.router.routeReuseStrategy.shouldReuseRoute = () => false;
+            this.router.onSameUrlNavigation = 'reload';
+            this.router.navigate(['/dashboard'], { queryParams: { active: 1 } });
         }
     }
 }
