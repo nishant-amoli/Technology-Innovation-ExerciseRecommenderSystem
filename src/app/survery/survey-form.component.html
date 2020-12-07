@@ -8,7 +8,7 @@
   
       <div class="form-row justify-content-center p-3">
         <button mat-flat-button color="primary" 
-            type="submit" [disabled]="!form.valid" 
+            type="submit" [disabled]="!form.valid" (ngSubmit)="onSubmit()"
             style="width: 10em; margin: 5px;">
             Save
         </button>
@@ -16,7 +16,4 @@
       </div>
     </form>
   
-    <div *ngIf="payLoad" class="form-row">
-      <strong>Saved the following values</strong><br>{{payLoad}}
-    </div>
 </div>

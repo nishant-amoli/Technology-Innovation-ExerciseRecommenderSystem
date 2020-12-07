@@ -33,6 +33,7 @@ import { CreateAdvertisementComponent } from './create-advertisement/create-adve
 import { ExerciseEditDialogComponent } from './exercise-edit-dialog/exercise-edit-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AdminAdvertisementComponent } from './admin-advertisement/admin-advertisement.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AdminAdvertisementComponent } from './admin-advertisement/admin-adverti
     NoGymExercisesComponent,
     CreateAdvertisementComponent,
     ExerciseEditDialogComponent,
-    AdminAdvertisementComponent
+    AdminAdvertisementComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

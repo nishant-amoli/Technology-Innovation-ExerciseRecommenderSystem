@@ -28,7 +28,8 @@ export class SurveyFormComponent implements OnInit {
         this.payLoad = JSON.stringify(this.form.getRawValue());
         if (this.payLoad) {
             // Save payLoad to database.
-            console.log(this.payLoad);
+            //console.log(this.payLoad);
+            this.router.navigate(['/dashboard'], { queryParams: { active: 1}});
         }
     }
 }
