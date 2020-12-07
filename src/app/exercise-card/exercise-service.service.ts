@@ -12,7 +12,7 @@ export class ExerciseServiceService {
 
   constructor(private dashboardExerciseService: DashboardExercisesService) {
 
-    this.exerciseList = this.dashboardExerciseService.getAllExercise();
+    this.exerciseList = this.dashboardExerciseService.getAllExercise().map(x => Object.assign({}, x));
     this.exerciseList.forEach(exercise => {
       exercise.isAdmin = true;
     })
