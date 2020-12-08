@@ -49,6 +49,7 @@ export class QuestionService {
               // {key: 'LGBTQ',   value: 'LGBTQ+'},
               // {key: 'do not wish to answer', value: 'Do not wish to answer'}
             ],
+            required: true,
             order: 1
           }),
 
@@ -63,6 +64,7 @@ export class QuestionService {
               {key: '31-40',   value: '31 - 40'},
               {key: 'above40', value: 'Above 40'}
             ],
+            required: true,
             order: 2
           }),
 
@@ -74,6 +76,7 @@ export class QuestionService {
               {key: 'Weight Loss',  value: 'Weight Loss'},
               {key: 'Weight Gain',  value: 'Weight Gain'}
             ],
+            required: true,
             order: 3
           }),
 
@@ -82,7 +85,7 @@ export class QuestionService {
             key: 'Amount',
             label: 'How much weight amount do you want to loss/gain?',
             value: '',
-            required: false,
+            required: true,
             order: 4
           }),
 
@@ -94,6 +97,7 @@ export class QuestionService {
               {key: 'Gym',  value: 'Gym'},
               {key: 'Yoga/Aerobics',  value: 'Yoga/Aerobics'}
             ],
+            required: true,
             order: 5
           }),
 
@@ -102,7 +106,7 @@ export class QuestionService {
             key: 'Workout Time',
             label: 'How much time can you dedicate to your workout in a day (in minutes)?',
             value: '',
-            required: false,
+            required: true,
             order: 6
           }),
 
@@ -111,7 +115,7 @@ export class QuestionService {
             key: 'Height',
             label: 'Height (in meters)',
             value: '',
-            required: false,
+            required: true,
             order: 7
           }),
 
@@ -120,7 +124,7 @@ export class QuestionService {
             key: 'Weight',
             label: 'Weight (kgs)',
             value: '',
-            required: false,
+            required: true,
             order: 8
           }),
 
@@ -129,7 +133,7 @@ export class QuestionService {
             key: 'BMI',
             label: 'BMI',
             value: '',
-            required: false,
+            required: true,
             order: 9
           }),
 
@@ -142,6 +146,7 @@ export class QuestionService {
               {key: 'Intermediate',  value: 'Intermediate'},
               {key: 'Expert',  value: 'Expert'}
             ],
+            required: true,
             order: 10
           }),
 
