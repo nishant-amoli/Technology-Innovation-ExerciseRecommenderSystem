@@ -34,8 +34,11 @@ Step 1) Installation of Angular CLI using the command:
 **_npm install -g @angular/cli_**
 
 Step 2) In order to create, build, and run a new project following commands can be used:
+
 **_ng new my-first-project_**
+
 **_cd my-first-project_**
+
 **_ng serve_**
 
 ### Set Up this application
@@ -46,9 +49,11 @@ Step 1) Clone the below repository to get the application code on local machine.
 ***https://github.com/nishant-amoli/Technology-Innovation-ExerciseRecommenderSystem.git***
 
 Step 2) Run the following command to Install the dependencies in the local node*modules folder.
-\*\*\_npm install*\*\*
+
+**_npm install_**
 
 Step 3) Run the following command to start the angular application
+
 **_ng serve_**
 
 ## Running the application
