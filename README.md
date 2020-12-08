@@ -32,6 +32,7 @@ To build this web application, Angluar has been used. Following are the steps fo
 
 Step 1) Installation of Angular CLI using the command:
 **_npm install -g @angular/cli_**
+
 Step 2) In order to create, build, and run a new project following commands can be used:
 **_ng new my-first-project_**
 **_cd my-first-project_**
