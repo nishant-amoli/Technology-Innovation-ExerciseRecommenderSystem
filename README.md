@@ -112,7 +112,9 @@ Step 2) Open the link of the deployed application provided under the deployment 
 ## Deployment
 
 **Link to the repository:** ***https://github.com/nishant-amoli/Technology-Innovation-ExerciseRecommenderSystem***
+
 **Link to the deployed application (dev environment):** ***https://dev-exercise-recommender-sys.herokuapp.com/***
+
 **Link to the deployed application (dev environment):** ***https://prod-exercise-recommender-sys.herokuapp.com/***
 
 ## Acknowledgments
